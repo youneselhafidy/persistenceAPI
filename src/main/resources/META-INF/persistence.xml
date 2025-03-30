@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
+             version="3.0">
+    <persistence-unit name="my-pu">
+<!--        OneToOne-->
+        <class>com.jpa.persistenceapi.OneToOne.Unidir.EmployeeOneToOneUnidir</class>
+        <class>com.jpa.persistenceapi.OneToOne.Unidir.Address</class>
+
+        <class>com.jpa.persistenceapi.OneToOne.Bidir.EmployeeOneToOneBidir</class>
+        <class>com.jpa.persistenceapi.OneToOne.Bidir.AddressBidir</class>
+<!--        OneToMany-->
+        <class>com.jpa.persistenceapi.OneToMany.Unidir.Employee</class>
+        <class>com.jpa.persistenceapi.OneToMany.Unidir.DepartmentOneToManyUnidir</class>
+
+        <class>com.jpa.persistenceapi.OneToMany.Bidir.EmployeeBidir</class>
+        <class>com.jpa.persistenceapi.OneToMany.Bidir.DepartmentOneToManyBidir</class>
+<!--        ManyToMany-->
+        <class>com.jpa.persistenceapi.ManyToMany.Unidir.Course</class>
+        <class>com.jpa.persistenceapi.ManyToMany.Unidir.StudentManyToManyUnidir</class>
+
+        <class>com.jpa.persistenceapi.ManyToMany.Bidir.CourseBidir</class>
+        <class>com.jpa.persistenceapi.ManyToMany.Bidir.StudentManyToManyBidir</class>
+<!--        -->
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:4306/persistenceapi"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+            <property name="jakarta.persistence.logging.level" value="FINE"/>
+
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="eclipselink.weaving" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
