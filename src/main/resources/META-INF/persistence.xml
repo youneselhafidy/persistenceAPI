@@ -22,7 +22,19 @@
 
         <class>com.jpa.persistenceapi.ManyToMany.Bidir.CourseBidir</class>
         <class>com.jpa.persistenceapi.ManyToMany.Bidir.StudentManyToManyBidir</class>
-<!--        -->
+<!--        Inheritance-->
+        <class>com.jpa.persistenceapi.Heritage.SingleTable.PersonSingleTable</class>
+        <class>com.jpa.persistenceapi.Heritage.SingleTable.StudentSingleTable</class>
+        <class>com.jpa.persistenceapi.Heritage.SingleTable.TeacherSingleTable</class>
+
+        <class>com.jpa.persistenceapi.Heritage.Joined.PersonJoined</class>
+        <class>com.jpa.persistenceapi.Heritage.Joined.StudentJoined</class>
+        <class>com.jpa.persistenceapi.Heritage.Joined.TeacherJoined</class>
+
+        <class>com.jpa.persistenceapi.Heritage.TablePerClass.PersonTablePerClass</class>
+        <class>com.jpa.persistenceapi.Heritage.TablePerClass.StudentTablePerClass</class>
+        <class>com.jpa.persistenceapi.Heritage.TablePerClass.TeacherTablePerClass</class>
+
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:4306/persistenceapi"/>
